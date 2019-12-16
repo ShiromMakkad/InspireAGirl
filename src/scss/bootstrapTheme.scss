@@ -1,14 +1,31 @@
 // From http://colormind.io/bootstrap/
-$lightShade: #ebedf0;
-$lightAccent: #8891A3;
-$brandColor: #7c6db1;
-$darkAccent: #787185;
+$lightShade: #EBEDF0;
+$lightAccent: #8689A5;
+$brandColor: #7C6DB1;
+$darkAccent: #626D9D;
 $darkShade: #272742;
 
-$primary: #7a70b2;
-$info: #272742;
-$success: #5a9c6d;
-$warning: #d78c35;
+$primary: #7c6cb2;
+$info: #252844;
+$success: #5a9b6d;
+$warning: #d88b35;
 $danger: #f44336;
+
+$font-family: 'Lato';
+$font-file: '../assets/latoFont/Lato-Medium';
+@mixin font($font-family, $font-file) {
+  @font-face {
+    font-family: $font-family;
+    src: url($font-file+'.eot');
+    src: url($font-file+'.eot?#iefix') format('embedded-opentype'),
+  url($font-file+'.woff') format('woff'),
+  url($font-file+'.ttf') format('truetype'),
+  url($font-file+'.svg#aller') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+$font-family-base: 'Lato', sans-serif;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
