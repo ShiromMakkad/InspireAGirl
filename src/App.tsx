@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from "react-bootstrap/Button";
-import './App.css';
 import Navigation from "./components/Navigation";
+import './scss/App.scss';
 
 const App: React.FC = () => {
   return (
