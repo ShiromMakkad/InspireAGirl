@@ -1,1 +1,43 @@
 @import "bootstrapTheme";
+
+#bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+
+#bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+}
+
+//This places the image in the right place and makes sure it scales well for desktops and phones
+#img {
+  object-fit: cover;
+  width: 100%;
+  min-height: 60vh;
+  max-height: 80vh;
+}
+
+//This sets the tint on the image. From https://cssfox.co/=maxim-aginsky/log/three-ways-to-tint-image-with-css3-box-shadow-multiple-backgrounds-and-pseudo-elements. It's method 2
+html {
+  #tint {
+    position: relative;
+    //display: inline-block; had to remove this for the image placement css to work. Doesn't affect tint
+  }
+  #tint:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 3000px rgba($darkShade, 0.5) inset;
+  }
+}
