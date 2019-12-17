@@ -18,11 +18,17 @@ export class Navigation extends React.Component {
                     <Navbar.Collapse id="responsive-navbar-nav" style={{backgroundColor: "#7c6cb2", width: "100%"}}>
                         <Container>
                             <Nav className="mx-auto">
-                                <Nav.Item>
+                                <Nav.Item as="a" href="#">
                                     <a className="navbar-link" href="#">Test1</a>
                                 </Nav.Item>
-                                <Nav.Item>
+                                <Nav.Item as="a" href="#">
                                     <a className="navbar-link" href="#">Test2</a>
+                                </Nav.Item>
+                                <Nav.Item as="a" href="#">
+                                    <a className="navbar-link" href="#">Test3</a>
+                                </Nav.Item>
+                                <Nav.Item as="a" href="#">
+                                    <a className="navbar-link" href="#">Test4</a>
                                 </Nav.Item>
                             </Nav>
                         </Container>
