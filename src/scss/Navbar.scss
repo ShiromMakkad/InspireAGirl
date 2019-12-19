@@ -1,58 +1,63 @@
 @import 'bootstrapTheme.scss';
 
-//This group is for making the hover white with a black background while not in the mobile view
-html {
-  @media only screen and (min-width: nth(nth($grid-breakpoints, 3), 2)) {
-    .nav-item:hover {
-      background-color: white;
-
-      .navbar-link {
-        color: black;
-      }
-    }
-  }
-
-  @media only screen and (max-width: nth(nth($grid-breakpoints, 3), 2)) {
-    .nav-item:hover {
-      a:focus {
-        color: white;
-      }
-    }
-  }
-
-  .navbar-link {
-    color: white;
-  }
-}
-
 //Removes the underline that's on links by default for the page navigation buttons
 .nav-item:hover {
   a:hover {
     text-decoration: none;
   }
+
   text-decoration: none;
 }
 
-//Adds padding to the page navigation buttons
-.nav-item {
-  padding: 0.6rem 2.3rem;
+.navbar {
+  background-color: $body-bg;
 }
 
-.navbar-toggler {
-  border-color: transparent;
+//How I do the background on the nav buttons is pretty weird. The nav button text is surrounded by the nav item which is surrounded by a container which is surrounded by the navbar.
+// In order to make sure that setting the nav item background goes all the way to the bottom of the navbar, there has to be no padding on any parent elements.
+// That's why the padding variables are set in bootstrapTheme.scss. Then I just set the padding on the nav items to be larger than anything else.
+// This will make them extend to the bottom of the navbar. Now I just have to add coloring
+html {
+  //These two margins are set to adding padding in the mobile view. I use margin because padding causes a weird bug where the navigation animation gets removed.
+  #title {
+    margin: 0.5rem 1rem !important;
+  }
+
+  .navbar-toggler-icon {
+    margin: 0.5rem 0.25rem !important;
+  }
+
+  //Adds padding to the page navigation buttons
+  .nav-item {
+    padding: 1.6rem 1.4rem;
+  }
+
+  //Navbar coloring
+  .nav-item {
+    color: $backgroundTextColor;
+    transition: 0.4s ease;
+    .navbar-link {
+      color: $backgroundTextColor;
+    }
+  }
+
+  .active, .nav-item:hover {
+    .navbar-link {
+      color: white;
+    }
+    background-color: $brandColor;
+  }
 }
 
-.navbar-toggle.collapsed {
-  .top-bar {
-    transform: rotate(0);
-  }
+.navbar-link {
+  font-size: 1.1rem;
+}
 
-  .middle-bar {
-    opacity: 1;
-  }
-
-  .bottom-bar {
-    transform: rotate(0);
-  }
+//This sets the brand name in the navbar
+#brandName {
+  color: $brandColor;
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin: 0;
 }
 

@@ -4,8 +4,8 @@
 #img {
   object-fit: cover;
   width: 100%;
-  min-height: 60vh;
-  max-height: 80vh;
+  min-height: 70vh;
+  max-height: 85vh;
 }
 
 //This sets the tint on the image. From https://cssfox.co/=maxim-aginsky/log/three-ways-to-tint-image-with-css3-box-shadow-multiple-backgrounds-and-pseudo-elements. It's method 2
@@ -19,7 +19,7 @@ html {
     position: absolute;
     width: 100%;
     height: 100%;
-    box-shadow: 0 3000px rgba($darkShade, 0.5) inset;
+    box-shadow: 0 3000px rgba($darkShade, 0.55) inset;
   }
 }
 
@@ -56,7 +56,11 @@ html {
   }
 
   Button {
-    padding-right: 2.3rem;
-    padding-left: 2.3rem;
+    padding-right: 1.6rem;
+    padding-left: 1.6rem;
   }
+}
+
+#scrollTest {
+  height: 1000px;
 }

@@ -14,9 +14,10 @@ const App: React.FC = () => {
                 <div id="bannerText">
                     <h1>Call to Action</h1>
                     <h3>Subtitle</h3>
-                    <Button size="lg">BIGGGGG Button</Button>
+                    <Button size="lg">Learn More</Button>
                 </div>
             </div>
+            <div id="scrollTest"/>
         </div>
     );
 };

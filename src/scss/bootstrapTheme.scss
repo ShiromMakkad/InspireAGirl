@@ -1,14 +1,9 @@
-// From http://colormind.io/bootstrap/
-$lightShade: #EBEDF0;
-$lightAccent: #8689A5;
-$brandColor: #7C6DB1;
-$darkAccent: #626D9D;
-$darkShade: #272742;
+@import 'globals.scss';
 
-$primary: #7c6cb2;
-$info: #252844;
-$success: #5a9b6d;
-$warning: #d88b35;
+$primary: $brandColor;
+$info: #282337;
+$success: #5b9071;
+$warning: #d87f39;
 $danger: #f44336;
 
 $font-family: 'Lato';
@@ -28,6 +23,13 @@ $font-file: '../assets/latoFont/Lato-Medium';
 
 $font-family-base: 'Lato', sans-serif;
 
+$navbar-padding-y: 0;
+$navbar-padding-x: 0;
+
 $navbar-light-toggler-border-color: transparent;
+
+body {
+  color: $backgroundTextColor;
+}
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
