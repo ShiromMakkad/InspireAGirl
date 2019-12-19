@@ -19,12 +19,12 @@
 // This will make them extend to the bottom of the navbar. Now I just have to add coloring
 html {
   //These two margins are set to adding padding in the mobile view. I use margin because padding causes a weird bug where the navigation animation gets removed.
-  #title {
+  #brandName {
     margin: 0.5rem 1rem !important;
   }
 
   .navbar-toggler-icon {
-    margin: 0.5rem 0.25rem !important;
+    margin: 0.5rem 0.5rem !important;
   }
 
   //Adds padding to the page navigation buttons
