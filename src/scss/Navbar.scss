@@ -51,6 +51,18 @@ html {
   }
 }
 
+.nav-item {
+  //This will align the nav text in the center when not in the mobile dropdown view. In that case, I want the text on the left.
+  @media only screen and (min-width: $sm) {
+    text-align: center;
+  }
+
+  //This aligns the text vertically. 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .navbar-link {
   font-size: 1.1rem;
 }
