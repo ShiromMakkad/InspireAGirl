@@ -76,6 +76,39 @@ html {
   z-index: 99;
 }
 
+#problem {
+  margin: 2rem 0rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#problemIcon {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 2rem 0rem;
+}
+
+.problemIconContainer {
+  text-align: center;
+  margin: 0rem 2rem;
+}
+
+.problemIcons {
+  color: $primary;
+  margin: 1.25rem;
+}
+
+.iconCaption {
+  max-width: 250px;
+  font-size: 1.05rem;
+}
+
 #scrollTest {
   height: 1000px;
 }
