@@ -47,21 +47,25 @@ const App: React.FC = () => {
             <div id="problem">
                 <h1>The Problem</h1>
                 <div id="problemIcon">
-                    <div className="problemIconContainer">
-                        <FontAwesomeIcon size="5x" className="problemIcons" icon={faBookReader}/>
-                        <p className="iconCaption">Women make up <b>two-thirds</b> of illiterate people</p>
+                    <div className="wrapIcons">
+                        <div className="problemIconContainer">
+                            <FontAwesomeIcon size="5x" className="problemIcons" icon={faBookReader}/>
+                            <p className="iconCaption">Women make up <b>two-thirds</b> of illiterate people</p>
+                        </div>
+                        <div className="problemIconContainer">
+                            <FontAwesomeIcon size="5x" className="problemIcons" icon={faFeatherAlt}/>
+                            <p className="iconCaption">Only <b>39%</b> of rural girls attend secondary school</p>
+                        </div>
                     </div>
-                    <div className="problemIconContainer">
-                        <FontAwesomeIcon size="5x" className="problemIcons" icon={faFeatherAlt}/>
-                        <p className="iconCaption">Only <b>39%</b> of rural girls attend secondary school</p>
-                    </div>
-                    <div className="problemIconContainer">
-                        <FontAwesomeIcon size="5x" className="problemIcons" icon={faPiggyBank}/>
-                        <p className="iconCaption">Every year of primary school increases girls' wages by <b>10-20%</b></p>
-                    </div>
-                    <div className="problemIconContainer">
-                        <FontAwesomeIcon size="5x" className="problemIcons" icon={faSchool}/>
-                        <p className="iconCaption">Rural girls are <b>twice</b> as likely as urban girls to be out of school</p>
+                    <div className="wrapIcons">
+                        <div className="problemIconContainer">
+                            <FontAwesomeIcon size="5x" className="problemIcons" icon={faPiggyBank}/>
+                            <p className="iconCaption">Every year of primary school increases girls' wages by <b>10-20%</b></p>
+                        </div>
+                        <div className="problemIconContainer">
+                            <FontAwesomeIcon size="5x" className="problemIcons" icon={faSchool}/>
+                            <p className="iconCaption">Rural girls are <b>twice</b> as likely as urban girls to be out of school</p>
+                        </div>
                     </div>
                 </div>
             </div>

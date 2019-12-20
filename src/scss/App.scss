@@ -115,6 +115,15 @@ html {
     max-width: 250px;
     font-size: 1.05rem;
   }
+
+  //The wrapIcons divs are just there to make the icons wrap two at a time.
+  //The parent div is flex-wrap too, so when the screen gets too small, the wrapIcons divs get stacked on top of each other.
+  //When the screen gets even smaller, the wrapIcons divs are flex-wrap, so the icons will be stacked on top of each other, so you'll have all 4 icons on top of each other.
+  .wrapIcons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 #scrollTest {
