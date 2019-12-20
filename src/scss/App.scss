@@ -76,37 +76,45 @@ html {
   z-index: 99;
 }
 
-#problem {
-  margin: 2rem 0rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+//problem section
+html {
+  //This aligns the container for the whole problem section
+  #problem {
+    margin: 2rem 0rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-#problemIcon {
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: 2rem 0rem;
-}
+  //This container has the list of icons (everything besides the h1 tag in the problem section)
+  #problemIcon {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 2rem 0rem;
+  }
 
-.problemIconContainer {
-  text-align: center;
-  margin: 0rem 2rem;
-}
+  //Not to be confused with the above tag. This is for the container for each icon and text
+  .problemIconContainer {
+    text-align: center;
+    margin: 0rem 2rem;
+  }
 
-.problemIcons {
-  color: $primary;
-  margin: 1.25rem;
-}
+  //This styles the icons themselves
+  .problemIcons {
+    color: $primary;
+    margin: 1.25rem;
+  }
 
-.iconCaption {
-  max-width: 250px;
-  font-size: 1.05rem;
+  //This styles each icon's caption
+  .iconCaption {
+    max-width: 250px;
+    font-size: 1.05rem;
+  }
 }
 
 #scrollTest {
