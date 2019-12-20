@@ -36,7 +36,7 @@ const App: React.FC = () => {
     return (
         <div className="App">
             <div ref={home}/>
-            <Navigation/>
+            <Navigation scrollHome={scrollHome}/>
             <div id="banner">
                 <div id="tint">
                     <img src={require('./assets/bannerImage.jpg')} id="img" alt="Indian Girl"/>
