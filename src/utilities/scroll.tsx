@@ -15,18 +15,27 @@ export const handleScroll = debounce((e) => {
     }
 
     // @ts-ignore
-    if (active !== 1 && window.pageYOffset >= document.getElementById("problemRef").offsetTop - document.getElementsByClassName("navbar")[0].offsetHeight) {
+    if (active !== 2 && window.pageYOffset >= document.getElementById("aboutUsRef").offsetTop - document.getElementsByClassName("navbar")[0].offsetHeight) {
         removeActive();
+        console.log(navItems);
 
-        navItems[1].className += " active";
-        active = 1;
+        navItems[2].className += " active";
+        active = 2;
     } else {
         // @ts-ignore
-        if (active !== 0 && window.pageYOffset < document.getElementById("problemRef").offsetTop - document.getElementsByClassName("navbar")[0].offsetHeight) {
+        if (active !== 1 && window.pageYOffset >= document.getElementById("problemRef").offsetTop - document.getElementsByClassName("navbar")[0].offsetHeight && window.pageYOffset < document.getElementById("aboutUsRef").offsetTop - document.getElementsByClassName("navbar")[0].offsetHeight) {
             removeActive();
 
-            navItems[0].className += " active";
-            active = 0;
+            navItems[1].className += " active";
+            active = 1;
+        } else {
+            // @ts-ignore
+            if (active !== 0 && window.pageYOffset < document.getElementById("problemRef").offsetTop - document.getElementsByClassName("navbar")[0].offsetHeight) {
+                removeActive();
+
+                navItems[0].className += " active";
+                active = 0;
+            }
         }
     }
 }, 10);

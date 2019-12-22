@@ -1,5 +1,10 @@
 @import "bootstrapTheme";
 
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
 //This places the image in the right place and makes sure it scales well for desktops and phones
 #img {
   object-fit: cover;
@@ -124,6 +129,30 @@ html {
     flex-direction: row;
 	justify-content: center;
     flex-wrap: wrap;
+  }
+}
+
+//About Us
+html {
+  #aboutUs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    align-self: center;
+  }
+  #aboutUsText {
+    margin: 1rem;
+    flex: 2;
+    min-width: 350px;
+  }
+  #aboutUsImage {
+    margin: 1rem;
+    flex: 3;
+    min-width: 500px;
   }
 }
 

@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 
-export class Navigation extends React.Component<{scrollHome: any, scrollProblem: any}> {
+export class Navigation extends React.Component<{scrollHome: any, scrollProblem: any, scrollAboutUs: any}> {
     render() {
         return (
             <Navbar expand="md" variant="light" sticky="top">
@@ -19,7 +19,7 @@ export class Navigation extends React.Component<{scrollHome: any, scrollProblem:
                             <Nav.Item onClick={this.props.scrollProblem}>
                                 <a className="navbar-link">The Problem</a>
                             </Nav.Item>
-                            <Nav.Item onClick={this.props.scrollHome}>
+                            <Nav.Item onClick={this.props.scrollAboutUs}>
                                 <a className="navbar-link">About Us</a>
                             </Nav.Item>
                             <Nav.Item onClick={this.props.scrollHome}>

@@ -2,6 +2,7 @@ import React, {useEffect, useRef} from 'react';
 import Navigation from "./components/Navigation";
 import './scss/App.scss';
 import Button from "react-bootstrap/Button";
+import Image from "react-bootstrap/Image"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faChevronUp} from "@fortawesome/free-solid-svg-icons/faChevronUp";
 import {faBookReader} from "@fortawesome/free-solid-svg-icons/faBookReader";
@@ -9,6 +10,7 @@ import {faFeatherAlt} from "@fortawesome/free-solid-svg-icons/faFeatherAlt";
 import {faPiggyBank} from "@fortawesome/free-solid-svg-icons/faPiggyBank";
 import {faSchool} from "@fortawesome/free-solid-svg-icons/faSchool";
 import {handleScroll} from "./utilities/scroll";
+import Container from "react-bootstrap/Container";
 
 let navHeight = 0;
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - navHeight);
@@ -21,6 +23,9 @@ const App: React.FC = () => {
     const problem = useRef(null);
     const scrollProblem = () => scrollToRef(problem);
 
+    const aboutUs = useRef(null);
+    const scrollAboutUs = () => scrollToRef(aboutUs);
+
     useEffect(() => {
         navHeight = document.getElementsByClassName("navbar")[0].clientHeight;
         window.addEventListener('scroll', handleScroll);
@@ -32,7 +37,7 @@ const App: React.FC = () => {
     return (
         <div className="App">
             <div id="homeRef" ref={home}/>
-            <Navigation scrollHome={scrollHome} scrollProblem={scrollProblem}/>
+            <Navigation scrollHome={scrollHome} scrollProblem={scrollProblem} scrollAboutUs={scrollAboutUs}/>
             <div id="banner">
                 <div id="tint">
                     <img src={require('./assets/bannerImage.jpg')} id="img" alt="Indian Girl"/>
@@ -45,7 +50,7 @@ const App: React.FC = () => {
             </div>
             <div id="problemRef" ref={problem}/>
             <div id="problem">
-                <h1>The Problem</h1>
+                <h2 style={{fontSize: "3rem"}}>The Problem</h2>
                 <div id="problemIcon">
                     <div className="wrapIcons">
                         <div className="problemIconContainer">
@@ -60,15 +65,39 @@ const App: React.FC = () => {
                     <div className="wrapIcons">
                         <div className="problemIconContainer">
                             <FontAwesomeIcon size="5x" className="problemIcons" icon={faPiggyBank}/>
-                            <p className="iconCaption">Every year of primary school increases girls' wages by <b>10-20%</b></p>
+                            <p className="iconCaption">Every year of primary school increases girls' wages
+                                by <b>10-20%</b></p>
                         </div>
                         <div className="problemIconContainer">
                             <FontAwesomeIcon size="5x" className="problemIcons" icon={faSchool}/>
-                            <p className="iconCaption">Rural girls are <b>twice</b> as likely as urban girls to be out of school</p>
+                            <p className="iconCaption">Rural girls are <b>twice</b> as likely as urban girls to be out
+                                of school</p>
                         </div>
                     </div>
                 </div>
             </div>
+            <hr style={{width: "50%"}}/>
+            <div id="aboutUsRef" ref={aboutUs}/>
+            <Container>
+                <div id="aboutUs">
+                    <div id="aboutUsText">
+                        <h2>About Us</h2>
+                        <br/>
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut
+                            aliquip ex ea commodo consequat. </p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                            culpa qui officia deserunt mollit anim id est laborum."</p>
+                        <p><b>Sed ut perspiciatis unde omnis</b></p>
+                    </div>
+                    <div id="aboutUsImage">
+                        <Image src={require('./assets/rotary.png')} fluid/>
+                    </div>
+                </div>
+            </Container>
             <hr style={{width: "50%"}}/>
             <div id="scrollTest"/>
             <Button onClick={scrollHome} id="scrollTop"><FontAwesomeIcon icon={faChevronUp}/></Button>
