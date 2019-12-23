@@ -93,8 +93,10 @@ const App: React.FC = () => {
                             culpa qui officia deserunt mollit anim id est laborum."</p>
                         <p><b>Sed ut perspiciatis unde omnis</b></p>
                     </div>
-                    <div id="aboutUsImage">
-                        <Image src={require('./assets/rotary.png')} fluid/>
+                    <div id="aboutUsImageContainer">
+                        <div id="aboutUsImageBackground">
+                            <Image src={require('./assets/rotary.png')} id="aboutUsImage" fluid/>
+                        </div>
                     </div>
                 </div>
             </Container>
