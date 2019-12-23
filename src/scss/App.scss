@@ -144,13 +144,13 @@ html {
 
   //This adds margin and tells this component to be 2/5ths of the total width
   #aboutUsText {
-    margin: 1rem;
+    margin: 2rem;
     flex: 2;
   }
 
   //The image is 3/5ths of the total width
   #aboutUsImageContainer {
-    margin: 1rem;
+    margin: 2rem;
     flex: 3;
 
     padding: 10px; //The purple background adds 10px on all sides, but doesn't move the DOM around since it uses position relative. This will add the appropriate spacing.
@@ -166,6 +166,51 @@ html {
   //For the purple background to be centered, we have to move it half of the distance to the image in the opposite direction.
   //The background will be 10px off center to the right. The image will be 20px to the left of the purple background, or 10px off center to the left
   #aboutUsImageBackground {
+    background-color: $brandColor;
+
+    position: relative;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+//Who We Help (almost the same as about us)
+html {
+  //This is the styling for the main container. It vertically and horizontally aligns the container contents
+  #whoWeHelp {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    //Flex-wrap doesn't work well for this purpose. The image just keeps getting smaller and smaller without going underneath the text. This is best.
+    @media only screen and (max-width: $md) {
+      flex-direction: column;
+    }
+  }
+
+  //This adds margin and tells this component to be 2/5ths of the total width
+  #whoWeHelpText {
+    margin: 2rem;
+    flex: 2;
+  }
+
+  //The image is 3/5ths of the total width
+  #whoWeHelpImageContainer {
+    margin: 2rem;
+    flex: 3;
+
+    padding: 10px;
+  }
+
+  //For all the purple background code, see the about us explanation
+  #whoWeHelpImage {
+    position: relative;
+    bottom: 20px;
+    left: 20px;
+  }
+
+  #whoWeHelpImageBackground {
     background-color: $brandColor;
 
     position: relative;

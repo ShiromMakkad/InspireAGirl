@@ -26,6 +26,9 @@ const App: React.FC = () => {
     const aboutUs = useRef(null);
     const scrollAboutUs = () => scrollToRef(aboutUs);
 
+    const whoWeHelp = useRef(null);
+    const scrollWhoWeHelp = () => scrollToRef(whoWeHelp);
+
     useEffect(() => {
         navHeight = document.getElementsByClassName("navbar")[0].clientHeight;
         window.addEventListener('scroll', handleScroll);
@@ -37,7 +40,7 @@ const App: React.FC = () => {
     return (
         <div className="App">
             <div id="homeRef" ref={home}/>
-            <Navigation scrollHome={scrollHome} scrollProblem={scrollProblem} scrollAboutUs={scrollAboutUs}/>
+            <Navigation scrollHome={scrollHome} scrollProblem={scrollProblem} scrollAboutUs={scrollAboutUs} scrollWhoWeHelp={scrollWhoWeHelp}/>
             <div id="banner">
                 <div id="tint">
                     <img src={require('./assets/bannerImage.jpg')} id="img" alt="Indian Girl"/>
@@ -101,6 +104,29 @@ const App: React.FC = () => {
                 </div>
             </Container>
             <hr style={{width: "50%"}}/>
+            <div id="whoWeHelpRef" ref={whoWeHelp}/>
+            <Container>
+                <div id="whoWeHelp">
+                    <div id="whoWeHelpImageContainer">
+                        <div id="whoWeHelpImageBackground">
+                            <Image src={require('./assets/WhoWeHelp.jpg')} id="whoWeHelpImage" fluid/>
+                        </div>
+                    </div>
+                    <div id="whoWeHelpText">
+                        <h2>Who We Help</h2>
+                        <br/>
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut
+                            aliquip ex ea commodo consequat. </p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                            culpa qui officia deserunt mollit anim id est laborum."</p>
+                        <p><b>Sed ut perspiciatis unde omnis</b></p>
+                    </div>
+                </div>
+            </Container>
             <div id="scrollTest"/>
             <Button onClick={scrollHome} id="scrollTop"><FontAwesomeIcon icon={faChevronUp}/></Button>
         </div>
