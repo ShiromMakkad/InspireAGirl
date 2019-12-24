@@ -15,7 +15,13 @@ export const handleScroll = debounce((e) => {
     }
 
     //@ts-ignore
-    if (active !== 3 && window.pageYOffset >= document.getElementById("whoWeHelpRef").offsetTop - document.getElementsByClassName("navbar")[0].offsetHeight) {
+    if ((active !== 4 && window.pageYOffset >= document.getElementById("contactRef").offsetTop - document.getElementsByClassName("navbar")[0].offsetHeight) || (window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+        removeActive();
+
+        navItems[4].className += " active";
+        active = 4;
+        //@ts-ignore
+    } else if (active !== 3 && window.pageYOffset >= document.getElementById("whoWeHelpRef").offsetTop - document.getElementsByClassName("navbar")[0].offsetHeight && window.pageYOffset < document.getElementById("contactRef").offsetTop - document.getElementsByClassName("navbar")[0].offsetHeight) {
         removeActive();
 
         navItems[3].className += " active";
