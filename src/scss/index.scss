@@ -1,3 +1,9 @@
+@import "globals";
+
 html {
   scroll-behavior: smooth;
+}
+
+::selection {
+  background: $lightAccent;
 }
