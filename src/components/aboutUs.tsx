@@ -11,17 +11,13 @@ export class AboutUs extends React.Component {
                     <div id="aboutUsText">
                         <h2>About Us</h2>
                         <br/>
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore
-                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                            nisi
-                            ut
-                            aliquip ex ea commodo consequat. </p>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-                            in
-                            culpa qui officia deserunt mollit anim id est laborum."</p>
-                        <p><b>Sed ut perspiciatis unde omnis</b></p>
+                        <p>The resource disparity between the upper and lower classes of developing countries has a
+                            substantial negative impact on the female population. Many women living in rural India have
+                            little to no say in anything concerning their homes or work. The root of this problem comes
+                            from a lack of female education.</p>
+                        <p>"The best way to uplift an impoverished section of society is through education. That is what
+                            we aspire to do here at Inspire a Girl."</p>
+                        <p><b>Anoushka Makkad - Founder</b></p>
                     </div>
                     <div id="aboutUsImageContainer">
                         <div id="aboutUsImageBackground">

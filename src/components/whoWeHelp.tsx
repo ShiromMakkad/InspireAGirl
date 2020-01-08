@@ -16,17 +16,12 @@ export class WhoWeHelp extends React.Component {
                     <div id="whoWeHelpText">
                         <h2>Who We Help</h2>
                         <br/>
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore
-                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                            nisi
-                            ut
-                            aliquip ex ea commodo consequat. </p>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-                            in
-                            culpa qui officia deserunt mollit anim id est laborum."</p>
-                        <p><b>Sed ut perspiciatis unde omnis</b></p>
+                        <p>Our goal is to provide an education for girls who lack the ability to receive it themselves
+                            for financial reasons. Their access to proper education will help them become productive
+                            members of society.</p>
+                        <p>We sponsored an eighth-grader named Surbhi who lost her father a few years ago. Her mother
+                            was struggling to pay her tuition without the aid of her father. We provided the financial
+                            means for her to get the education she deserves.</p>
                     </div>
                 </div>
             </Container>

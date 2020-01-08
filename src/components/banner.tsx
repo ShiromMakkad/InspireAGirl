@@ -10,8 +10,7 @@ export class Banner extends React.Component<{ scrollProblem: any }> {
                     <img src={require('../assets/bannerImage.jpg')} id="img" alt="Indian Girl"/>
                 </div>
                 <div id="bannerText">
-                    <h1>Call to Action</h1>
-                    <h3>Subtitle</h3>
+                    <h1>A Chance for Every Girl</h1>
                     <Button size="lg" onClick={this.props.scrollProblem}>Learn More</Button>
                 </div>
             </div>
