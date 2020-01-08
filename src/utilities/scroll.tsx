@@ -3,7 +3,9 @@ import debounce from "lodash/debounce";
 let scrollTopIsShowing = false;
 let active = 0;
 const navItems = document.getElementsByClassName("nav-item");
+//This function runs on every scroll
 export const handleScroll = debounce((e) => {
+    //This determines whether the scroll to top button should be visible.
     if (!scrollTopIsShowing && window.pageYOffset > 450) {
         scrollTopIsShowing = true;
         // @ts-ignore
@@ -14,6 +16,7 @@ export const handleScroll = debounce((e) => {
         document.getElementById("scrollTop").style.opacity = 0;
     }
 
+    //These checks determine which nav item to highlight
     //@ts-ignore
     if ((active !== 4 && window.pageYOffset >= document.getElementById("contactRef").offsetTop - document.getElementsByClassName("navbar")[0].offsetHeight) || (window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
         removeActive();

@@ -1,0 +1,64 @@
+@import "../bootstrapTheme";
+
+//This places the image in the right place and makes sure it scales well for desktops and phones
+#img {
+  object-fit: cover;
+  width: 100%;
+  min-height: 70vh;
+  max-height: 85vh;
+}
+
+//This sets the tint on the image. From https://cssfox.co/=maxim-aginsky/log/three-ways-to-tint-image-with-css3-box-shadow-multiple-backgrounds-and-pseudo-elements. It's method 2
+html {
+  #tint {
+    position: relative;
+    //display: inline-block; had to remove this for the image placement css to work. Doesn't affect tint
+  }
+
+  #tint:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 3000px rgba($darkShade, 0.45) inset;
+  }
+}
+
+#banner {
+  border-bottom: 2px solid;
+}
+
+//This centers the banner text on top of the image
+html {
+  #banner {
+    position: relative;
+  }
+
+  #bannerText {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+//banner text styling
+#bannerText {
+  h1 {
+    color: white;
+    font-size: 4.3rem;
+    font-weight: 600;
+  }
+
+  h3 {
+    color: white;
+    padding-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+
+  Button {
+    padding-right: 1.6rem;
+    padding-left: 1.6rem;
+  }
+}

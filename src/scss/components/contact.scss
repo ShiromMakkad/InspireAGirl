@@ -1,0 +1,104 @@
+@import "../bootstrapTheme";
+
+//The contact section
+#contact {
+  margin: 3rem 0rem;
+  text-align: center;
+}
+
+//This is the container for the contact form. It's a bootstrap container, so it has the bootstrap automatic margins. It sets up alignment of the form
+#contactFormContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @media only screen and (max-width: $md) {
+    flex-direction: column;
+  }
+}
+
+#contactForm {
+  border-radius: 3px;
+  //background-color: $lightShade;
+  flex: 1;
+
+  text-align: left;
+
+  margin: 0rem 2rem;
+}
+
+//contact form submit button
+#contactSubmit {
+  width: 100%;
+}
+
+//This is the image that goes next to the contact form
+#contactImageContainer {
+  padding: 10px;
+
+  order: 2;
+}
+
+//For all the purple background code, see the about us explanation
+#contactImage {
+  position: relative;
+  bottom: 20px;
+  left: 20px;
+}
+
+//This is the purple background for the contact form. For an explanation of the code, see the about us section
+#contactImageBackground {
+  background-color: $brandColor;
+
+  position: relative;
+  top: 10px;
+  right: 10px;
+}
+
+//This is the container for the email address and any other contact information
+#donationInformation {
+  order: 3;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  //When viewed on the desktop where the contact image and form are next to each other, the email looks best underneath the form.
+  //When on mobile, we want the email to be next to the contact form, so we switch the order.
+  @media only screen and (max-width: $md) {
+    order: 1;
+  }
+
+  //The email/address/other info container
+  .donationInfo {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    margin: 1rem 0rem;
+  }
+
+  //Icon for donation information
+  .donationIcons {
+    color: $brandColor;
+  }
+
+  //Text for donation information
+  .donationText {
+    margin: 0;
+    padding: 0.5rem 1rem;
+  }
+}
+
+//Container for the right side. There has to be a container because we want the form to the left of the image, but the image must be above the email
+//To do this, there has to be a flex-row on the outisde and a column on the right side.
+#rightSideContact {
+  margin: 0rem 2rem;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+}

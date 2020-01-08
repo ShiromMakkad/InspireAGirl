@@ -1,0 +1,43 @@
+@import "../bootstrapTheme";
+
+//This is the styling for the main container. It vertically and horizontally aligns the container contents
+#whoWeHelp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  //Flex-wrap doesn't work well for this purpose. The image just keeps getting smaller and smaller without going underneath the text. This is best.
+  @media only screen and (max-width: $md) {
+    flex-direction: column;
+  }
+}
+
+//This adds margin and tells this component to be 2/5ths of the total width
+#whoWeHelpText {
+  margin: 2rem;
+  flex: 2;
+}
+
+//The image is 3/5ths of the total width
+#whoWeHelpImageContainer {
+  margin: 2rem;
+  flex: 3;
+
+  padding: 10px;
+}
+
+//For all the purple background code, see the about us explanation
+#whoWeHelpImage {
+  position: relative;
+  bottom: 20px;
+  left: 20px;
+}
+
+#whoWeHelpImageBackground {
+  background-color: $brandColor;
+
+  position: relative;
+  top: 10px;
+  right: 10px;
+}
