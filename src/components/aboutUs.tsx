@@ -15,8 +15,8 @@ export class AboutUs extends React.Component {
                             substantial negative impact on the female population. Many women living in rural India have
                             little to no say in anything concerning their homes or work. The root of this problem comes
                             from a lack of female education.</p>
-                        <p>"The best way to uplift an impoverished section of society is through education. That is what
-                            we aspire to do here at Inspire a Girl."</p>
+                        <p>"The best way to uplift an impoverished section of society is through education. That is our 
+                            mission here at Inspire a Girl."</p>
                         <p><b>Anoushka Makkad - Founder</b></p>
                     </div>
                     <div id="aboutUsImageContainer">
