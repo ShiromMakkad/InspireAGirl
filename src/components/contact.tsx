@@ -62,7 +62,7 @@ const Contact: React.FC = () => {
                 <div id="rightSideContact">
                     <div id="contactImageContainer">
                         <div id="contactImageBackground">
-                            <Image src={require('../assets/mooseicon.jpg')} id="contactImage" fluid/>
+                            <Image src={require('../assets/Anoushka.JPG')} id="contactImage" fluid/>
                         </div>
                     </div>
                     <div id="donationInformation">
