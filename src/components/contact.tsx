@@ -22,7 +22,7 @@ const Contact: React.FC = () => {
 
     return (
         <div id="contact">
-            <h2>Contact Us To Donate</h2>
+            <h2 id="contactHeader">Contact Us To Donate</h2>
             <Container id="contactFormContainer">
                 <Form id="contactForm" onSubmit={formSubmit}>
                     <Form.Row>

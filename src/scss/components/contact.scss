@@ -6,6 +6,11 @@
   text-align: center;
 }
 
+//This is the "Contact Us To Donate" message
+#contactHeader {
+  margin-bottom: 1.7rem;
+}
+
 //This is the container for the contact form. It's a bootstrap container, so it has the bootstrap automatic margins. It sets up alignment of the form
 #contactFormContainer {
   display: flex;
